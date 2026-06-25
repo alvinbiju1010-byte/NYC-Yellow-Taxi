@@ -91,15 +91,9 @@ nyc-taxi-spark-pipeline/
 ├── visualization.py            # Chart generation (8 visualizations)
 ├── download_data.py            # Dataset downloader
 ├── requirements.txt            # Python dependencies
-├── report.md                   # Project report (source)
-├── report.pdf                  # Project report (PDF)
 ├── README.md                   # This file
 ├── .gitignore                  # Git ignore rules
-├── data/
-│   ├── raw/                    # Raw downloaded data
-│   └── processed/              # Parquet output + CSV results + charts
-│       └── charts/             # PNG chart files
-└── LICENSE
+
 ```
 
 ---
