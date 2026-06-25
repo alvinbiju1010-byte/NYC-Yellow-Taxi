@@ -8,24 +8,21 @@
 
 **Student:** Alvin Biju  
 **Student ID:** GH1029339  
-**Course:** Big Data Management — Individual Project  
 **Dataset:** [NYC Yellow Taxi Trip Records (Jan 2023)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
 ---
 
 ## Project Overview
 
-A complete big data management solution for processing, analysing, and modelling NYC Yellow Taxi trip records using **Apache Spark**. The pipeline ingests raw trip data (~3 million rows/month), performs comprehensive cleaning and feature engineering, stores results in optimised Parquet format, executes analytical queries via Spark SQL, and applies machine learning models for trip segmentation and fare prediction.
+So it’s basically a all-inclusive big data management system, that leans on **Apache Spark** to process, examine, and even predict on NYC Yellow Taxi trip data. The pipeline brings in the raw trip dataset (around three million rows each month), then it cleans it up, builds features, and stores everything in a tuned Parquet format. After that, it runs analytic questions with Spark SQL, and later on it trains machine learning models to kind of split up the trips into clusters and foresee the fares, sort of anticipates what they might end up being.
 
 ### Key Features
 
-- **7-stage ETL Pipeline:** Load → Clean → Transform → Integrate → Store → Analyse → ML
-- **6 SQL Analytical Queries:** Payment behaviour, demand patterns, trip economics, traffic analysis
-- **K-Means Clustering:** Unsupervised trip segmentation with Silhouette Score evaluation
-- **Random Forest Regression:** Fare prediction with RMSE, MAE, and R² evaluation
-- **8 Publication-Quality Visualizations:** Matplotlib + Seaborn charts
-- **83% Storage Reduction:** Parquet + Snappy compression vs raw CSV
+The seven-step ETL pipeline goes like load , clean, transform, integrate , store , analyze , and machine learning. Trip economics , payment behavior , demand patterns and traffic analysis are the six SQL analytical queries .  
 
+For the first part: K-Means Clustering, kind of unsupervised trip segmentation , with Silhouette Score analysis to see what “fits” better . There’s also fare prediction, where we use Random Forest Regression and then judge it with RMSE, MAE , and R2 analysis.  
+
+Matplotlib + Seaborn charts make up eight publication quality visualizations. And there’s this **83 percent Storage Reduction** bit , where Parquet plus Snappy compression beats unprocessed CSV in size .
 ### Technology Stack
 
 | Layer | Technology |
@@ -123,20 +120,11 @@ nyc-taxi-spark-pipeline/
 
 ## Machine Learning Models
 
-### K-Means Clustering
-- **Purpose:** Segment taxi trips into behavioural clusters
-- **Features:** 6 normalised features (distance, duration, fare, fare/mile, speed, passengers)
-- **Evaluation:** Silhouette Score + WSSSE, tested k=2 through k=6
-- **Result:** Optimal k identified with well-separated clusters
+K-Means Clustering ###Divide taxi rides into behavioral groupings, basically.
+We used six normalized features (distance, time, fare, fare/mile, speed, passengers) and threw them into the model. Evaluation used Silhouette Score plus WSSSE, and we tested from k=2 to k=6. After a bit, it turned out that the clusters were pretty well separated and the best k came out as the optimum, or at least that’s what the metrics suggested.
 
-### Random Forest Regression
-- **Purpose:** Predict total fare from trip features
-- **Features:** 6 features (distance, duration, passengers, hour, weekday, payment type)
-- **Train/Test:** 80/20 split (seed=42)
-- **Evaluation:** RMSE, MAE, R²
-- **Result:** R² ≈ 0.85 — strong predictive power
 
----
+Regression w Random Forests, the aim is sort of to anticipate the overall cost from trip things. You know, distance, duration, passengers, hour, weekday, and payment type these are the six features used. Then we did a split like 80/20, seed =42 , with training and testing. For checks we looked at RMSE, MAE, and R2, and the final number R2 = 0.85 shows excellent predictive power, so basically it’s working really well.
 
 ## Key Findings
 
@@ -156,9 +144,6 @@ nyc-taxi-spark-pipeline/
 
 ---
 
-## License
-
-MIT — see [LICENSE](LICENSE) file.
 
 ---
 
