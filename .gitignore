@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Spark
+metastore_db/
+derby.log
+spark-warehouse/
+
+# Data files (large)
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/*.parquet/
+data/processed/*.csv/
+data/processed/results_*/
+
+# Keep chart images
+!data/processed/charts/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
